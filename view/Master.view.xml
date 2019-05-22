@@ -1,0 +1,88 @@
+<mvc:View controllerName="zhcm.ecert.appv.controller.Master" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic">
+	<semantic:MasterPage id="page" navButtonPress="onNavBack" showNavButton="true" class="sapUiSizeCompact">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<SearchField id="searchField" tooltip="{i18n>masterSearchTooltip}" width="100%" search="onSearch"></SearchField>
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+		<semantic:content>
+			<PullToRefresh id="pullToRefresh" visible="{= ${device>/system/phone} ? true : ${device>/system/tablet} ? true:false}" refresh="handleRefresh" />
+			<!-- For client side filtering add this to the items attribute: parameters: {operationMode: 'Client'}}" -->
+			<List id="list" items="{alMaster>/results}" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true"
+				growingScrollToLoad="false" selectionChange="onSelectionChange" growingThreshold="10">
+			
+				<infoToolbar>
+					<Toolbar id="tb1">
+						<content>
+							<Label text="Filter:"/>
+							<Label text="{FilterModel>/filteredBy}"/>
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button icon="sap-icon://reset" press="bReset"  ></Button>
+						</content>
+					</Toolbar>
+				</infoToolbar>
+				<items>
+					<ObjectListItem type="Active" press="onSelectionChange" title="{alMaster>EmployeeName}" showMarkers="true" markLocked="{alMaster>IsLocked}"
+						class="etest">
+						<attributes>
+							<ObjectAttribute
+								text="{path:'alMaster>PayPeriodStartDate', type : 'sap.ui.model.type.Date', formatOptions: { pattern: 'MM/dd/yyyy' }} - {path :'alMaster>PayPeriodEndDate', type : 'sap.ui.model.type.Date', formatOptions: { pattern: 'MM/dd/yyyy' }}"
+								class="objMrkClass"/>
+							<ObjectAttribute text="Pay Period:{alMaster>PayrollPeriod}-{alMaster>PayrollYear}"/>
+							<ObjectAttribute text="{= ${alMaster>IsChangedAfter} === true?'CHANGED AFTER CERTIFIED':''}"
+								visible="{= ${alMaster>IsChangedAfter} === true?true:false}"/>
+						</attributes>
+						<!--	<markers>
+							<ObjectMarker type="Locked" visible="{= ${isLocked} === 'X'?true:false}"/>
+						</markers>-->
+						<firstStatus>
+							<ObjectStatus text="{= ${alMaster>IsCertified} === 'C'?'Certified':${alMaster>IsCertified} === 'D'?'Declined':'No Action'}"
+								state="{= ${alMaster>IsCertified} === 'C'?'Success':${alMaster>IsCertified} === 'D'?'Error':'Warning'}"/>
+						</firstStatus>
+						<secondStatus>
+							<ObjectStatus text="{= ${alMaster>PresentPeriod} === 'X'?'Present Period':''}"
+								state="{= ${alMaster>PresentPeriod} === 'X'?'Success':'None'}"/>
+						</secondStatus>
+					</ObjectListItem>
+				</items>
+			</List>
+		</semantic:content>
+		<!--	<semantic:sort>
+			<semantic:SortSelect
+				id="sort"
+				selectedKey="{masterView>/sortBy}"
+				change="onSort">
+				<core:Item
+					id="masterSort1"
+					key="CategoryName"
+					text="{i18n>masterSort1}"/>
+				<core:Item
+					id="masterSort2"
+					key="CategoryID"
+					text="{i18n>masterSort2}"/>
+			</semantic:SortSelect>
+		</semantic:sort>-->
+		<semantic:filter>
+			<semantic:FilterAction id="filter" press="onOpenViewSettings"/>
+		</semantic:filter>
+		<!--		<semantic:group>
+			<semantic:GroupSelect
+				id="group"
+				selectedKey="{masterView>/groupBy}"
+				change="onGroup">
+				<core:Item
+					id="masterGroupNone"
+					key="None"
+					text="{i18n>masterGroupNone}"/>
+				<core:Item
+					id="masterGroup1"
+					key="CategoryID"
+					text="{i18n>masterGroup1}"/>
+			</semantic:GroupSelect>
+		</semantic:group>
+-->
+	</semantic:MasterPage>
+</mvc:View>

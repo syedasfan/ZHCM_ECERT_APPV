@@ -1,0 +1,11 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="zhcm.ecert.appv.controller.NotFound"
+	xmlns:html="http://www.w3.org/1999/xhtml" class="sapUiSizeCompact">
+	<Page title="Title" showHeader="false">
+		<content>
+			<MessagePage showHeader="false" text="Not Found " description=""/>
+		</content>
+		<footer>
+			<Toolbar></Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

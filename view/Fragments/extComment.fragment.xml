@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" class="sapUiSizeCompact">
+<Dialog class="ecerts" title="Add New Comment" type='Message' contentWidth="30%" 	icon="sap-icon://edit">
+	<content>
+	<Label text="Existing Comment"></Label>	
+	<TextArea width='100%'  enabled="true" class="disabledBox" editable="false"></TextArea>	
+	<Label text="Additional Comment"></Label>	
+	<TextArea width='100%'  ></TextArea>
+	</content>
+	<beginButton>
+		<Button press="onEXTCOk" text="OK"></Button>
+	</beginButton>
+	<endButton>
+			<Button press="onEXTCCancel" text="Cancel"></Button>
+	</endButton>
+</Dialog>
+</core:FragmentDefinition>

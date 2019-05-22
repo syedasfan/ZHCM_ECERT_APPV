@@ -1,0 +1,27 @@
+{
+	"time": [
+
+		{
+			"Pernr": "",
+			"PayPeriodNumber": "12345",
+			"PayPeriodYear": "11-09-1990",
+			"LeaveDate": "Mon-19-02-2017",
+			"LeaveTypeCode": "Z001",
+			"LeaveDescription": "Not Feeling well",
+			"Start_leave": "04.05PM to 09.05PM",
+			"Hours": "5",
+			"Posted":"WF-CAT6"
+		},
+		{
+			"Pernr": "",
+			"PayPeriodNumber": "12345",
+			"PayPeriodYear": "11-09-1990",
+			"LeaveDate": "Mon-19-02-2017",
+			"LeaveTypeCode": "SL",
+			"LeaveDescription": "At the discretion of the agency, up to a maximum of 240 hours (30 days) of sick leave may be advanced to an employee ",
+			"Start_leave": "04.05PM to 09.05PM",
+			"Hours": "5",
+			"Posted":"SYSTEM"
+		}
+	]
+}

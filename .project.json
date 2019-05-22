@@ -1,0 +1,20 @@
+{
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZHCM_ECERT_APPROVER_SRV_01/",
+    "metadataFilePath": "localService/metadata.xml",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "deploy": {
+    "destination": "DEV",
+    "name": "ZHCM_ECERT_APPV"
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "",
+    "defaultLanguage": "",
+    "defaultI18NPropertyFile": "",
+    "resourceModelName": ""
+  }
+}

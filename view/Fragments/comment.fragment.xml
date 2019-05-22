@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" class="sapUiSizeCompact">
+	<Dialog title="Reject eCertification Confirmation" type='Message' contentWidth="30%" binding= "{alMaster>/results/0}" > 
+		<content>
+			<FlexBox alignContent="Start" justifyContent="SpaceBetween">
+			<items>
+				<VBox width="100%" class="sapUiTinyMarginBottom">
+					<HBox justifyContent="SpaceBetween" alignItems="Stretch">
+					<Label text="{alMaster>EmployeeName}" design="Bold"/>
+			
+				</HBox>
+				<HBox>
+				
+					<Text text="{alMaster>PayPeriodDates}"/>
+				</HBox>
+				</VBox>
+			</items>
+		</FlexBox>
+		<Label text="Reason for Rejection:"></Label>
+			<TextArea placeholder="Max Character 40" width='100%' maxLength="40"></TextArea>
+		</content>
+		
+		<beginButton>
+			<Button press="onOk" text="OK"></Button>
+		</beginButton>
+		<endButton>
+			<Button press="onCancel" text="Cancel"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

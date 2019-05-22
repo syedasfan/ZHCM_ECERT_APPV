@@ -1,0 +1,122 @@
+.objMrkClass.sapMObjectAttributeDiv {
+     width: 115%!important;
+}
+.clsLarge{
+	    font-size: larger!important;
+}
+.sapMTextNoWrap, .sapMTextMaxLine {
+    overflow: hidden;
+    font-size: 85% !important;
+}
+.sapMObjLNumber {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.079rem;
+    font-weight: normal;
+    color: #333333;
+}
+element.style {
+    width: 100%;
+    /* font-style: italic; */
+    font-weight: bold;
+    font-size: large;
+}
+.maCss{
+	    margin-top: -0.5rem!important;
+    	margin-bottom: -1.5rem!important;
+}
+.etest .sapMLIBContent .sapMObjLTopRow .sapMObjLNumberDiv .sapMObjLNumber{
+        font-size: 1.0rem!important;
+}
+.thisSpace .sapMObjLTopRow{
+	display:none !important;
+}
+.objCls > * {
+    font-size: 13px !important;
+}
+objCls1 > *{
+	font-size: 13px !important;
+}
+.hbCss.sapUiLargeMarginBegin{
+	   margin-left: 1rem!important;
+	   margin-top: 1rem!important;
+}
+.txtCss.sapUiLargeMarginBegin{
+	   margin-left: 2rem!important;
+}
+
+.ecerts .smObjTitle .sapMObjLTitle {
+    font-size: large;
+}
+.ecerts .smObjTitle .sapMObjLNumber {
+    font-size: 1rem;
+}
+.ecerts .disabledBox .sapMTextAreaInner {
+    background: #e5e5e5;
+}
+ .sapMInputBaseInner {
+    color: #000000;
+    font-size: 0.875rem;
+    font-family: Arial,Helvetica,sans-serif;
+   
+}
+.ecerts .sapMObjLIntro {
+    font-size: 1rem;
+    color: #004990;
+}
+.ecertAlert span {
+    color: #cc1919;
+}
+.ecertAlert span:before {
+    content: "Posted by: ";
+    color: #666666;
+}
+.ecertSuccess span {
+    color: #007833;
+}
+.ecertSuccess span:before {
+    content: "Posted by: ";
+    color: #666666;
+}
+.ecertObjHdr .sapMObjectNumberText {
+    font-size: 1rem;
+}
+.ecerts .sapMObjAttrIcon {
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+}
+.ecerts .sapMObjAttrIcon:hover {
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    color: blue;
+}
+.ecerts .sapMObjAttrIcon .upperTop {
+    vertical-align: top;
+    display: inline-block;
+     color: #1a7ffd;
+}
+.ecerts .disabledBox .sapMTextAreaInner {
+    background: #e5e5e5;
+}
+.ecerts .sapMObjLAttrDiv .sapMObjectAttributeDiv.customObjAttr {
+    text-overflow: initial !important;
+}
+.ecerts .sapMObjLAttrDiv .sapMObjectAttributeDiv.customObjAttr span.sapMTextMaxWidth{
+    max-width: 90% !important;
+}
+.typeCls{
+	    font-size: 18px !important;
+    font-weight: 600 !important;
+    
+}
+.sapMObjLAttrRow:nth-child(1)>.sapMObjLAttrDiv .sapMObjectAttributeDiv, .sapMObjLAttrRow:nth-child(2)>.sapMObjLAttrDiv .sapMObjectAttributeDiv {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+color: #333333;
+     font-size: 1.05rem;
+}
